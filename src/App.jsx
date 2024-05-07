@@ -1,10 +1,34 @@
 
 import './App.css';
-import logo2 from "./img/Illustration.png";
 import logo  from "./img/Logo.png";
+import logo2 from "./img/Illustration.png";
 import logo3 from "./img/Arrow Right.png";
+import logo4 from "./img/[].png";
+import logo5 from "./img/[] (1).png";
+import logo6 from "./img/Icon.png";
+import logo7 from "./img/Icon (1).png";
+import logo8 from "./img/Icon (2).png";
 function App() {
-  
+  let icons = [
+    {
+      id:1,
+      icon:logo6,
+      number:'$30B',
+      decsription:"Digital Currency Exchanged"
+    },
+    {
+      id:2,
+      icon:logo7,
+      number:'10M+',
+      decsription:"Trusted Wallets Investor"
+    },
+    {
+      id:3,
+      icon:logo8,
+      number:'195',
+      decsription:"Countries Supported"
+    }
+  ]
   return (
     <div>
       <div className='header'>
@@ -47,13 +71,32 @@ function App() {
            <a href="" className='m-auto text-lg'>Try for FREE </a>
            <img src={logo3} alt="" className='ml-3' />
            </div>
-
-
           </div>
           <div className=' w-1/2'>
             <img src={logo2} alt="" />
           </div>
          </div>
+        <img src={logo4} className='absolute logo4' alt="" />
+        <img src={logo5} className='absolute logo5' alt="" />
+        <div className='flex mt-60 gap-10 justify-between w-4/5  m-auto flex-wrap'>
+
+        {
+          icons.map((Element)=>{
+            return(
+          <div key={Element.id} className='flex  w-80 items-center'>
+            <div>
+             <img src={Element.icon} alt="" />
+            </div>
+            <div className='ml-5  text-white  '>
+            <p className='text-3xl'>{Element.number}</p>
+            <p>{Element.decsription}</p>
+            </div>
+          </div>
+        )
+      })
+    }
+    </div>
+
       </div>
     </div>
   );
