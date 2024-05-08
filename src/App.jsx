@@ -8,6 +8,7 @@ import logo5 from "./img/[] (1).png";
 import logo6 from "./img/Icon.png";
 import logo7 from "./img/Icon (1).png";
 import logo8 from "./img/Icon (2).png";
+import logo9 from "./img/Illustrations.png";
 function App() {
   let icons = [
     {
@@ -96,7 +97,16 @@ function App() {
       })
     }
     </div>
-
+         <div className='flex w-5/6  m-auto mt-20 flex-wrap justify-between items-center'>
+          <div className='lg:w-1/2 md:w-full  '>
+           <img src={logo9} className='w-full' alt="" />
+          </div>
+          <div className='text-white lg:w-2/5  ml-5 m-auto'>
+           <h1 className='lg:text-5xl md:text-4xl sm:text-2xl lg:mt-0 md:mt-0 sm:mt-10  font-bold'>Why you should choose CRAPPO</h1>
+           <p className='my-5 lg:text-xl md:text-lg '>Experience the next generation cryptocurrency platform. No financial borders, extra fees, and fake reviews.</p>
+           <button className='a1 text-lg lg:p-3 lg:px-10 px-12 py-2  rounded-full'>Learn More</button>
+          </div>
+         </div>
       </div>
     </div>
   );
