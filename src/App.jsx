@@ -9,7 +9,61 @@ import logo6 from "./img/Icon.png";
 import logo7 from "./img/Icon (1).png";
 import logo8 from "./img/Icon (2).png";
 import logo9 from "./img/Illustrations.png";
+////////////////////////////////////////////////////
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
+import { SvgIcon } from '@mui/material';
 function App() {
+////////////////////////////////////////////
+const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: Boolean) => () => {
+    setOpen(newOpen);
+  };
+
+  const DrawerList = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+  
+////////////////////////////////////////////  
   let icons = [
     {
       id:1,
@@ -40,16 +94,22 @@ function App() {
         </div>
         <div className='flex justify-end items-center  w-3/4'>
 
-        <div className=' mr-12'>
+        <div className=' mr-12 lg:block md:hidden sm:hidden hidden'>
           <a href="">Products</a>
           <a href="" className='px-8'>Features</a>
           <a href="" className='pr-8'>About</a>
           <a href="">Contact</a>
         </div>
-        <div >
+        <div className='md:hidden lg:block sm:hidden hidden'>
          <a href="" className='pr-8 border-r-4 text-lg'>Login</a>
          <a href="" className='ml-8 p-5 px-14 text-lg rounded-full register'>Register</a>
         </div>
+        </div>
+        <div className='lg:hidden '>
+        <Button onClick={toggleDrawer(true)}><SvgIcon component={ViewHeadlineIcon} /></Button>
+      <Drawer open={open} onClose={toggleDrawer(false)}>
+        {DrawerList}
+      </Drawer>
         </div>
       </div>
 
