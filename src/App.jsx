@@ -53,31 +53,31 @@ function App() {
       </div>
 
          <div className='flex items-center flex-wrap mt-10  justify-between w-4/5 m-auto'>
-          <div className='text-white '>
-           <div className='flex items-center save rounded-full'>
-            <div className='bg-white text-black rounded-full  font-bold px-3 py-1'>
-              <p>75% SAVE</p>
+          <div className='text-white m-auto'>
+           <div className='flex items-center save rounded-full lg:p-1 md:p-2 sm:p-2 lg:w-2/3 md:max-w-4/5 sm:w-full p-1'>
+            <div className='bg-white text-black rounded-full  font-bold lg:px-3 md:p-1 sm:p-2 p-1 md:px-4 py-1 mr-2'>
+              <p className='text-*'>75% SAVE</p>
             </div>
             <div className='m-auto'>
           <p>For the Black Friday weekend</p>
            </div>
            </div>
-           <h1 className='text-6xl my-5 font-bold leading-tight '>Fastest & secure <br />
+           <h1 className='lg:text-6xl md:text-3xl sm:text-2xl text-3xl my-5 font-bold leading-tight '>Fastest & secure <br />
             platform to invest <br />
              in crypto</h1>
-             <p className=''>Buy and sell cryptocurrencies, trusted by 10M wallets <br />
+             <p className='lg:text-lg text-xs '>Buy and sell cryptocurrencies, trusted by 10M wallets <br />
               with over $30 billion in transactions.</p>
-           <div className='a1 flex items-center p-5 w-1/2 rounded-full mt-5'>
+           <div className='a1 flex items-center lg:p-5 md:p-4 sm:p-3 p-2 lg:w-1/2 md:w-2/3 sm:w-2/3 rounded-full mt-5'>
            <a href="" className='m-auto text-lg'>Try for FREE </a>
            <img src={logo3} alt="" className='ml-3' />
            </div>
           </div>
-          <div className=' w-1/2'>
+          <div className='lg:w-1/2 m-auto sm:mt-10'>
             <img src={logo2} alt="" />
           </div>
          </div>
-        <img src={logo4} className='absolute logo4' alt="" />
-        <img src={logo5} className='absolute logo5' alt="" />
+        <img src={logo4} className='absolute hidden lg:block lg:top-3/4' alt="" />
+        <img src={logo5} className='absolute right-0 hidden lg:block lg:top-2/3' alt="" />
         <div className='flex mt-60 gap-10 justify-between w-4/5  m-auto flex-wrap'>
 
         {
