@@ -167,6 +167,11 @@ const [open, setOpen] = React.useState(false);
            <button className='a1 text-lg lg:p-3 lg:px-10 px-12 py-2  rounded-full'>Learn More</button>
           </div>
          </div>
+         <div className='text-white text-center mt-40'>
+          <h1 className='lg:text-4xl md:text-3xl sm:text-xl font-bold mb-5'>Check how much you can earn</h1>
+          <p className='lg:text-base md:text-xd'>Let’s check your hash rate to see how much you will earn today, <br />
+          Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
       </div>
     </div>
   );
